@@ -9,21 +9,6 @@ html
   body id=(controller.controller_name) class=(controller.action_name)
     .wrapper
       .container
-        header.navbar.navbar-fixed-top
-          nav.navbar-inner
-            .container
-              .brand James The Giant
-              /ul.nav.pull-right
-              /  - if current_user
-              /    li.dropdown
-              /      a.dropdown-toggle href='#' data-toggle='dropdown'
-              /        = current_user.email
-              /        b.caret
-              /      ul.dropdown-menu
-              /        li= link_to 'Sign Out', sign_out_path
-              /  - else
-              /    li= link_to 'Sign In', sign_in_path
-
         - flash.each do |name, msg|
           = content_tag :div, raw(msg), class: "alert #{alert_class(name)}"
 
@@ -32,5 +17,4 @@ html
       .push
 
     footer
-      .container
-        p &copy; 2013 All rights reserved.
+      = image_tag 'outline.png'

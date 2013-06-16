@@ -1,3 +1,30 @@
 @import 'twitter/bootstrap';
+@import '_colors';
 @import '_navbar';
 @import '_footer';
+@import '_onesheet';
+
+body {
+  background-color: @black;
+}
+
+.background {
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+.content {
+  z-index: 1;
+}
+
+h1{
+  position: relative;
+}
+
+.logo {
+  width: 400px;
+  position: absolute;
+  top: 200px;
+  left: 30px;
+}

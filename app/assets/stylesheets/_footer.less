@@ -18,13 +18,19 @@ html, body {
 footer {
   height: @footerHeight;
   line-height: @footerHeight;
-
-  .container {
-    border-top: 1px solid @grayLighter;
-  }
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
 
   p {
     margin: 0;
     color: @grayLight;
+  }
+
+  img {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 800px;
   }
 }
