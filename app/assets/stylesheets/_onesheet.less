@@ -19,4 +19,18 @@ footer img {
   li {
     line-height: 14px;
   }
+
+  .song {
+    li > span {
+      display: inline-block;
+    }
+    .instruments {
+      &:after {
+        content: ":"
+      }
+    }
+    .player {
+      margin-left: 6px;
+    }
+  }
 }
