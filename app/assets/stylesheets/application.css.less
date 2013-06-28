@@ -6,25 +6,41 @@
 
 body {
   background-color: @black;
-}
-
-.background {
-  position:fixed;
-  top:0;
-  left:0;
+  color: @white;
 }
 
 .content {
-  z-index: 1;
-}
-
-h1{
-  position: relative;
+  padding-top: 100px;
 }
 
 .logo {
   width: 400px;
-  position: absolute;
-  top: 200px;
-  left: 30px;
+  margin-left: 30px;
+}
+
+.social {
+  .social-links {
+    margin: 30px auto 10px;
+    padding-top: 30px;
+    padding-left: 10px;
+    border-top: solid @white 1px;
+  }
+  a {
+    color: @white;
+    text-decoration: none;
+    text-align: center;
+  }
+  img {
+    width: 36px;
+    margin: 0 auto;
+    display: block;
+  }
+  .social-hint {
+    margin-top: 10px;
+    display: none;
+  }
+  a:hover .social-hint{
+    display: inline-block;
+  }
+  margin: 0 auto;
 }
