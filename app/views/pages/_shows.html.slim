@@ -1,0 +1,17 @@
+.row#shows
+  h2 SHOWS
+  table.calendar[jtg-calendar]
+    thead
+      tr
+        th Date
+        th Location
+        th Venue
+    tbody
+      tr ng-repeat='event in events' ng-click='eventInfo(event)'
+        td.event-date
+          | {{ event.start.date | moment: {input: 'songkick', output:'full'} }}
+        td.event-location
+          | {{ event.location.city }}
+        td.event-venue
+          | {{ event.venue.displayName }}
+
