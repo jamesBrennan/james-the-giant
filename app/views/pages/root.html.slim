@@ -1,17 +1,20 @@
 .row
   .content
     .row
-      h1.span4= image_tag 'james-the-giant-logo.png', alt: "James the Giant", class: 'logo span4'
+      h1.span5= image_tag 'james-the-giant-logo.png', alt: "James the Giant", class: 'logo span4'
       = render 'pull_quotes'
     .row
-      = render 'music'
-      = render 'video'
-      = render 'press'
-      //= render 'shows'
-    .row
-      = render 'twitter'
-      = render 'mailing_list'
-      = render 'contact'
-    .row
+      .span5
+        = render 'music'
+        = render 'twitter'
+      .span7
+        = render 'video'
+        = render 'press'
+        = render 'shows'
+        .row
+          .span4
+            = render 'mailing_list'
+          .span3
+            = render 'contact'
 
 
