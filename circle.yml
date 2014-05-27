@@ -1,0 +1,14 @@
+deployment:
+  acceptance:
+    branch: development
+    heroku:
+    commands:
+      - git push -f git@heroku.com:james-the-giant-acceptance.git $CIRCLE_SHA1:master:
+          timeout: 300
+      - heroku run rake db:migrate --app james-the-giant-acceptance
+  production:
+    branch: master
+    commands:
+      - git push -f git@heroku.com:james-the-giant.git  $CIRCLE_SHA1:master:
+          timeout: 300
+      - heroku run rake db:migrate --app james-the-giant
