@@ -12,6 +12,7 @@ gem 'slim-rails'
 gem 'less-rails'
 gem 'less-rails-bootstrap'
 gem 'jquery-rails'
+gem 'turbolinks'
 gem 'coffee-rails'
 gem 'simple_form', '~> 3.0.0.rc'
 gem 'uglifier'
@@ -43,7 +44,5 @@ group :development do
   gem 'guard-rspec'
   gem 'rb-fsevent'
   gem 'growl'
-
-  gem 'database_cleaner'
   gem 'cucumber-rails', require: false
 end
