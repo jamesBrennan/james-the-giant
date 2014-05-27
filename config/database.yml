@@ -9,7 +9,10 @@ development: &default
   pool: 5
   timeout: 5000
 
-test:
+test: &test
   <<: *default
   database: james_the_giant_test
   min_messages: warning
+
+cucumber:
+  <<: *test

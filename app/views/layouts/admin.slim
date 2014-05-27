@@ -2,12 +2,13 @@ doctype 5
 html[ng-app='jtg']
   head
     meta name="viewport" content="width=device-width, initial-scale=1.0"
-    title James The Giant
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    title James The Giant | Admin
+    = stylesheet_link_tag    'admin', media: 'all'
+    = javascript_include_tag 'admin'
     = csrf_meta_tag
 
   body id=(controller.controller_name) class=(controller.action_name)
+    = render 'admin/navbar'
     .wrapper
       .container
         = yield

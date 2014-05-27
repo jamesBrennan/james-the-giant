@@ -1,0 +1,10 @@
+nav.navbar.navbar-default.navbar-static-top role="navigation"
+  .container
+    .navbar-header
+      = link_to 'James the Giant', root_path, class: 'navbar-text'
+    - if @current_user
+      .navbar-text.navbar-right
+        | Signed in as #{@current_user['name']}
+
+      .navbar-text.navbar-right
+        = link_to 'Sign Out', admin_sign_out_path
