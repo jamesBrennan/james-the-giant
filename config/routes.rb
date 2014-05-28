@@ -1,4 +1,8 @@
 JamesTheGiant::Application.routes.draw do
+  namespace :admin do
+    resources :shows
+  end
+
   root to: 'pages#root'
 
   get 'releases/james-the-giant/one-sheet' => 'pages#onesheet'

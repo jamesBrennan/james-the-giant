@@ -1,0 +1,30 @@
+div.page-header
+  h1 Listing shows
+
+table.table.table-striped
+  thead
+    tr
+      th ID
+      th Date
+      th City
+      th State
+      th Link
+      th Actions
+
+  tbody
+  - @shows.each do |show|
+    tr
+      td= link_to show.id, admin_show_path(show)
+      td= show.date
+      td= show.city
+      td= show.state
+      td= show.link
+      td
+        /- if can? :edit, admin_show
+          = link_to 'Edit', edit_admin_show_path(admin_show), class: 'btn btn-mini'
+          '
+        /- if can? :destroy, admin_show
+          = link_to 'Destroy', admin_show_path(admin_show), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-mini btn-danger'
+
+/- if can? :create, AdminShow
+  = link_to 'New Show', new_admin_show_path, class: 'btn btn-primary'
