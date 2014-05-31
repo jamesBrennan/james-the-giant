@@ -20,4 +20,4 @@ end
 Rake::Task['spec'].clear_actions
 
 desc 'Runs all specs'
-task spec: ['spec:without_features', 'spec:features']
+task spec: ['spec:without_features', 'cucumber']
